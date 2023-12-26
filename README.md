@@ -14,5 +14,5 @@ Gallery: Photo and video gallery capturing memorable moments from school events.
 Contact Us: Interactive map, contact form, and details for easy communication.
 
 ## Technologies Used
-HTML5, CSS3 for structure and styling.
+HTML5, CSS3 for structure and styling.<br>
 JavaScript for interactivity and dynamic content.
