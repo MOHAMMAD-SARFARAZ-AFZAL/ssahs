@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#loader {
+    background: url(assets/loader.gif) center no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
