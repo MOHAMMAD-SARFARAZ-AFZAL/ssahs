@@ -298,6 +298,7 @@ body{
     }
     .admissiondetails{
         top: 657px;
+        height: 700px;
     }
     .head,.body{
         width: 250px;
@@ -308,9 +309,6 @@ body{
     }
     .head{
         font-size: 45px;
-    }
-    .admissiondetails{
-        height: 570px;
     }
     .section{
         top: 1227px;
