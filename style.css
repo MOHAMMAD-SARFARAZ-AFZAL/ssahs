@@ -1,10 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 
+body{
+    scroll-behavior: smooth;
+}
+
 #loader {
     background: url(assets/loader.gif) center no-repeat;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 100px;
+    background-color: #1463f3;
+    display: flex;
+    align-items: center;
+    font-family: 'Teko', sans-serif;
+    position: fixed;
+    color: #ffffff;
+    z-index: 5;
+    border-bottom: solid 2px #1d2023;
+}
+
+.logo {
+    /* background-color: red; */
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.schoolLogo {
+    height: 100px;
+}
+
+.navitems {
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: green; */
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.item {
+    font-size: x-large;
+}
+
+.mobitem {
+    font-family: 'Teko', sans-serif;
+    font-size: x-large;
+}
+
+.mobitem:hover {
+    border-bottom: solid 2px #1d2023;
+}
+
+.item:hover {
+    border-bottom: solid 2px #84a4fc;
+}
+
+.itemLink {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.slash {
+    color: #1d2023;
+    font-size: large;
+}
+
+.ham {
+    width: 45px;
+    display: none;
+    cursor: pointer;
+    border: none;
+    appearance: none;
+    background: none;
+    outline: none;
+    position: relative;
+    padding: 0px 9px;
+}
+
+.ham .hambar,
+.ham:after,
+.ham:before {
+    content: " ";
+    display: none;
+    width: 100%;
+    height: 3.5px;
+    background-color: #ffffff;
+    margin: 5px 0px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.ham.active:after {
+    transform: rotate(45deg) translate(-4px, -4px);
+}
+
+.ham.active:before {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.ham.active .hambar {
+    opacity: 0;
+}
+
+.mobnav {
+    display: none;
+}
+
+.mobnav.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    left: calc(100% - 200px);
+}
+
+.caraousel {
+    position: absolute;
+    top: 100px;
+    z-index: 0;
+    width: 100%;
+    height: 500px;
+    background-color: red;
+    user-select: none;
+    /* padding: 21px; */
+}
+
+.caraouselpic {
+    width: 100%;
+    height: 100%;
+    /* position: relative;
+    z-index: 1; */
+}
+
+.btns {
+    top: -350px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head, .body{
+    position: relative;
+    top: -350px;
+    left: 110px;
+    width: 900px;
+    font-family: 'Teko', sans-serif;
+    color: #ffffff;
+    text-justify: initial;
+}
+.body{
+    font-size: 33px;
+}
+.head{
+    font-size: 55px;
+}
+
+.controls {
+    fill: #ffffff;
+    cursor: pointer;
+    margin: 0px 50px;
+}
+
+.admissionbtn{
+    position: absolute;
+    width: 100%;
+    height: 57px;
+    top: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admissiondownload{
+    background-color: #84a4fc;
+    padding: 11px;
+}
+
+.downloadbtn{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.admissiondetails{
+    position: absolute;
+    top: 657px;
+    width: 98%;
+    height: 450px;
+    background-color: #1463f3;
+    margin: 0% 1%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* padding: 11px; */
+}
+
+.admissionhead, .admissionbody{
+    color: #ffffff;
+    font-family: 'Teko', sans-serif;
+    margin: 3px 21px;
+}
+
+.admissionbody{
+    font-size: large;
+}
+
+.admissionhead{
+    font-size: xx-large;
+}
+
+.steps{
+    margin: 0 1.9%;
+}
+
+.section{
+    position: relative;
+    width: 98%;
+    height: 400px;
+    top: 1107px;
+    border-radius: 25px;
+    margin: 0% 1%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about, .academics{
+    width: 50%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.academicshead, .abouthead{
+    font-family: 'Teko', sans-serif;
+    font-size: xx-large;
+    color: #1d2023;
+    margin: 1% 3%;
+}
+
+.academicsbody, .aboutbody{
+    width: 98%;
+    margin: 0% 1%;
+    height: 81%;
+    border-radius: 25px;
+    background-color: #84a4fc;
+}
+
+@media only screen and (max-width: 1041px) {
+    .nav {
+        justify-content: space-between;
+    }
+
+    .mobnav {
+        position: fixed;
+        top: 100px;
+        left: 100%;
+        z-index: 99;
+        background-color: #84a4fc;
+        width: 200px;
+        height: calc(100dvh - 100px);
+    }
+
+    .navitems {
+        display: none;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    .ham .hambar,
+    .ham:after,
+    .ham:before {
+        display: block;
+    }
+    .caraousel{
+        height: 500px;
+    }
+    .admissionbtn{
+        top:600px;
+    }
+    .admissiondetails{
+        top: 657px;
+    }
+    .head,.body{
+        width: 250px;
+        left: 91px;
+    }
+    .body{
+        font-size: 21px;
+    }
+    .head{
+        font-size: 45px;
+    }
+    .admissiondetails{
+        height: 570px;
+    }
+    .section{
+        top: 1227px;
+        height: 900px;
+    }
+    .section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about, .academics{
+        width: 100%;
+    }
 }
